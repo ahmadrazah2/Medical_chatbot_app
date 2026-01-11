@@ -8,7 +8,10 @@ class HuggingFaceLLM:
     def build(self) -> ChatHuggingFace:
         # Check for API token
         if "HUGGINGFACEHUB_API_TOKEN" not in os.environ:
-            print("Warning: HUGGINGFACEHUB_API_TOKEN not found in environment variables.")
+            raise ValueError(
+                "HUGGINGFACEHUB_API_TOKEN not found in environment variables. "
+                "Please add it to your .streamlit/secrets.toml file."
+            )
 
         llm = HuggingFaceEndpoint(
             repo_id=self.repo_id,
