@@ -4,7 +4,6 @@ langchain-community
 langchain-core
 langchain-text-splitters
 chromadb
-llama-cpp-python
 sentence-transformers
 pypdf
 langchain-huggingface

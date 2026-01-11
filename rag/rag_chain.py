@@ -25,7 +25,7 @@ class RAGPipeline:
 
     def retrieve(self, query: str) -> List[Document]:
         retriever = self.vectordb.as_retriever(search_kwargs={"k": self.k})
-        return retriever.get_relevant_documents(query)
+        return retriever.invoke(query)
 
     def _format_context(self, docs: List[Document]) -> str:
         # keep context short and clean
