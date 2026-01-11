@@ -1,0 +1,9 @@
+.streamlit/secrets.toml
+__pycache__/
+*.pyc
+chroma_db/
+models/
+mistral_models/
+.DS_Store
+.env
+venv/
